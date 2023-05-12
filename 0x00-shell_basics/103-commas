@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -printf '%P/\n' -o -type f -printf '%P\n' | sort -n | sed '1i./, ../'
+find . -type d -printf '%P/\n' -o -type f -printf '%P\n' | sort -n | sed -e '1i./, ../' -e 's!/!$!'
