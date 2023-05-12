@@ -1,2 +1,2 @@
 #!/bin/bash
-(printf "./, ../, "; ls -d1Ap | grep -v '/$') | sort -d -k1.2 | awk '{printf "%s, ", $0}' | sed 's/, $//'
+printf "%s," ./* ..?* | sort -d -k1.2 | awk '{printf "%s,",$0} END {print ""}'
