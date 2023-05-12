@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap | sort -d -k1.2 | tr '\n' ','; echo
+find . -type d -printf '%P/\n' -o -type f -printf '%P\n' | sort -n | sed '1i./, ../'
