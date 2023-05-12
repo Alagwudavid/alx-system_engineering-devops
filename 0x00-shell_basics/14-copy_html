@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -u --ignore-existing --include='*.html' --exclude='*' ./ ../
+rsync -ru --ignore-existing --exclude='*/' --include='*.html' ./ ../
