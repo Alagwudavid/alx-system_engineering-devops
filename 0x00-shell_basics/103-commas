@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -printf '%P/\n' -o -type f -printf '%P\n' | sort -n | sed -e '1i./, ../' -e 's!/!$!'
+ls -Ap | sort -d -k1.2 | awk '{printf "%s,", $0} END {print ""}'
