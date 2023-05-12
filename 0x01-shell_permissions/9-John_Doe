@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 755 "$("$($(pwd))/hello")"
+chmod u=rwx,g=rx,o=wx hello
