@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s," ./* ..?* | sort -d -k1.2 | awk '{printf "%s,",$0} END {print ""}'
+ls -pamv
