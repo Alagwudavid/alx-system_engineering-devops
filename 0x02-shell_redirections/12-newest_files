@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -maxdepth 1 -type f -printf "%T@ %f\n" | sort -rn | head -10 | cut -d ' ' -f 2-
