@@ -4,7 +4,7 @@
 #In a list formats
 #Where only the part of the name after the first dash is displayed
 
-for i in $(ls); do
-  IFS="-" read -ra parts <<< "$i"  # Split $i using "-" as the separator
+for i in *; do
+  IFS="-" read -ra parts <<< "$i"
   echo "${parts[1]}"
 done
