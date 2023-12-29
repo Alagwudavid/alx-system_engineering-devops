@@ -4,7 +4,11 @@
 #In a list formats
 #Where only the part of the name after the first dash is displayed
 
-for i in */; do
-  IFS="-" read -ra parts <<< "$i"
-  echo "${parts[1]}"
+for list in *; do
+	if [[ $list == *-* ]]; then
+		IFS="-" read -ra parts <<< "$list"
+		echo "${parts[1]}"
+	else
+		echo "$list"
+	fi
 done
